@@ -1,0 +1,62 @@
+:root {
+    --main-bg-color: whitesmoke;
+    --main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --title-font-color: #0366d6;
+
+    --my-dark-grey: #24292e;
+    --my-mid-grey: #48525c;
+
+    --my-blue-color: #0366d6;
+    --my-green-color: green;
+    --my-purple-color: purple;
+    --my-orange-color: orange;
+
+    --max-content-width: 1500px;
+    --min-content-width: 1000px;
+}
+
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    overflow: hidden;
+}
+
+.content-container {
+    font-family: var(--main-font);
+    font-size: 16px;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.title {
+    color: var(--title-font-color);
+    text-align: center;
+    font-size: 54px;
+    margin-bottom: 50px;
+}
+
+.title-paragraph {
+    text-align: center;
+}
+
+.content {
+    max-width: var(--max-content-width);
+    padding: 0 5%;
+    margin: 0 auto auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    margin: 5px auto;
+}
+
+img {
+    margin: 0 auto;
+}
