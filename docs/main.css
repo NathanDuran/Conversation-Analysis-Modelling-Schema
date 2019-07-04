@@ -16,22 +16,18 @@
 }
 
 body {
+    font-family: var(--main-font);
     background-color: whitesmoke;
     margin: 0;
-    overflow: hidden;
 }
 
-.content-container {
-    font-family: var(--main-font);
+.content {
     font-size: 16px;
-    position: absolute;
-    top: 64px;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    max-width: var(--max-content-width);
+    padding: 0 5%;
+    margin: 0 auto auto;
     display: flex;
     flex-direction: column;
-    overflow: auto;
 }
 
 .title {
@@ -43,20 +39,4 @@ body {
 
 .title-paragraph {
     text-align: center;
-}
-
-.content {
-    max-width: var(--max-content-width);
-    padding: 0 5%;
-    margin: 0 auto auto;
-    display: flex;
-    flex-direction: column;
-}
-
-form {
-    margin: 5px auto;
-}
-
-img {
-    margin: 0 auto;
 }
