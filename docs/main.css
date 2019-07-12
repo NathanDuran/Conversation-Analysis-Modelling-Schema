@@ -37,6 +37,10 @@ body {
     margin-bottom: 50px;
 }
 
+h1, h2 {
+    color: var(--title-font-color);
+}
+
 .title-paragraph {
     text-align: center;
 }
