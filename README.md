@@ -139,10 +139,11 @@ A corpus of CA labelled dialogue [CA-KVRET](https://github.com/NathanDuran/CA-KV
 
 &emsp; [acceptApology](#acceptapology)
 
+
 [Reference List](#references)
 ------------
 
-<a name="overview-link"></a>Overview
+Overview<a name="overview-link"></a>
 ========
 The Conversation Analysis (CA) schema defines a domain agnostic annotation scheme for dialogue that is aligned with relevant theories from within the CA literature and the Dialogue Act Mark-up Language (DiAML) as defined in ISO 24617 (British Standards Institution, 2012). The schema defines both Adjacency Pairs (AP) and Dialogue Acts (DA) which combine to form AP-types. The AP-type labels are designed to capture the semantic and syntactic structure of an interaction, in a format that is independent of the domain or topic, and which facilitate the computational modelling of dialogue.
 
@@ -150,7 +151,7 @@ There are 11 AP in the schema and the set includes; FPP and SPP for base, pre, p
 
 The set of 35 DA are derived from the Dialogue Act Mark-up Language (DiAML) as defined in ISO 24617 (British Standards Institution, 2012). DiAML was developed as an empirically and theoretically well founded, application independent, DA annotation scheme and is also intended to be used by both human annotators and automatic annotation methods.
 
-## <a name="ap-overview-link">Adjacency Pairs (AP)
+## Adjacency Pairs (AP)<a name="ap-overview-link">
 AP are the base units of sequence-construction in talk, and in their basic unexpanded form comprise of two turns by different speakers that take place one after the other. The initial turn is called the First Pair Part (FPP) and initiates an exchange, the second turn is a Second Pair Part (SPP) which are responsive to the prior FPP. For example:
 
      A: Do you know the directions to the Zoo?          FPP-base
@@ -167,14 +168,14 @@ To account for more complex dialogue structures, AP also include the concept of 
 
      B: Get on the subway.                              SPP-base
 
-## <a name="da-overview-link">Dialogue Acts (DA)
+## Dialogue Acts (DA)<a name="da-overview-link">
 DA are a method of labelling the semantic content and communicative function of a single utterance of dialogue, such as, a question, request or greeting etc. The semantic content specifies objects, propositions and events that the DA is about; the communicative function specifies the way an addressee should use the semantic content to update their information, or dialogue, state (Bunt et al., 2012). For example, the propositional question “Do you know the directions to the Zoo?” contains a proposition (Do you know directions?) and an object (the Zoo). The addressee knows that a response is expected (communicative function) and can use this information (semantic content) to formulate a response.
 
      A: Do you know the directions to the Zoo?          propQuestion
      
      B: Get on the subway.                              answer
 
-## <a name="ap-types-overview-link">Adjacency Pair Types (AP-types)
+## Adjacency Pair Types (AP-types)<a name="ap-types-overview-link">
 AP can also be ‘type related’ and this pair-type relation has the useful property of limiting the range of possible responses to a given FPP. For example, a question could be followed by an answer, or followed by a question (FPP-insert), to elicit information required to better answer the initial question. Within the CA Schema the AP-types are defined by the addition of a DA label. Both the AP and DA labels are combined to create an AP-type label for each utterance of a dialogue.
 
      A: Do you know the directions to the Zoo?          FPP-base - propQuestion
@@ -187,11 +188,11 @@ AP can also be ‘type related’ and this pair-type relation has the useful pro
 
 AP then, can act as formal set of ‘rules’ which describe how an interaction can be structured and that apply to all types of conversation, irrespective of the current topic or objectives of the interaction. The inclusion of DA as semantic type-labels for adjacency-pair-parts support this structure, by enabling the identification and selection of subsequent pair-parts and capturing an exchange into a single structure (Boyer et al., 2009).
 
-<a name="annotation-guidelines-link">Annotation Guidelines
+Annotation Guidelines<a name="annotation-guidelines-link">
 =====================
 The following section provides some guidance on the application of the schema when annotating dialogue and outlines certain limitations or restrictions that must be considered to maintain consistency with the definitions.
 
-## <a name="ap-annotation-guidelines-link">Adjacency Pair Sequences
+## Adjacency Pair Sequences<a name="ap-annotation-guidelines-link">
 For all AP sequence-types; base, pre, insert and post expansions the following rules apply:
 
 1.	The speaker of a FPP must be different to the speaker of a SPP.
@@ -228,7 +229,7 @@ Unlike base, pre and post type sequences, *Insert-expansion* are permitted to be
 
 *Minimal-expansions* have fewer restriction that pair-sequences to allow for flexibility when annotating. However, they should abide by their semantic intent. For example, a *pre-minimal-expansion* should be relating to a future base-type sequence, a *post-minimal-expansion* to a previous base-type sequence and an *insert-minimal-expansion* within a sequence.
 
-## <a name="da-ap-types-annotation-guidelines-link">Dialogue Acts and Adjacency Pair Types (AP-types)
+## Dialogue Acts and Adjacency Pair Types (AP-types)<a name="da-ap-types-annotation-guidelines-link">
 To produce AP-types an annotator must simply select one AP and one DA for an utterance of dialogue and the combination of these two labels is considered an AP-type label. The selection of the DA is dependent on the *semantic content* and *communicative function* of the individual utterance and the AP the utterances position within, or relation to, the structure of the dialogue.
 
 Due to the large number of possible combinations, and to allow flexibility, the schema does not explicitly define all valid DA and AP combinations. Instead, annotators should consider the meaning and context within which the individual labels being applied to produce AP-types. The following should provide some guidance when selecting combinations of appropriate labels. However, while they should apply in many circumstances, these are only examples, not explicit rules:
@@ -239,10 +240,10 @@ Due to the large number of possible combinations, and to allow flexibility, the 
 
 - DA within the *Social Obligations Management* Functions have initiating and responsive versions, i.e. *initialGreeting* and *returnGreeting*, and these naturally lend themselves to FPP and SPP respectively.
 
-<a name="label-definitions-link">Label Definitions
+Label Definitions<a name="label-definitions-link">
 =================
 
-## <a name="ap-label-definitions-link">Adjacency Pairs
+## Adjacency Pairs<a name="ap-label-definitions-link">
 Adjacency pairs are the basic units on which sequences in conversation are
 built. Their core features are:
 
@@ -256,7 +257,7 @@ built. Their core features are:
 4.  Differentiated into AP-types. The relationship between FPP and SPP is
     constrained by the type of FPP produced i.e. a *question* followed by an *answer*.
 
-<a name="base-label-definitions-link">Base
+Base<a name="base-label-definitions-link">
 ----
 The basic sequence is composed of two ordered turns at talk, the FPP and SPP.
 Participants in conversation orient to this basic sequence structure in
@@ -271,7 +272,7 @@ developing their talk and AP have a normative force in organizing conversation
 
      B: Three o’ clock.         SPP-base - answer
 
-<a name="expansions-label-definitions-link">Expansions
+Expansions<a name="expansions-label-definitions-link">
 ----------
 Expansion allow talk which is made up of more than a single AP to be constructed
 and understood as performing the same basic action and the various additional
@@ -337,7 +338,7 @@ sequences to be expanded after their SPP.
 
         B: No problem.                                      SPP-post - acceptThanking
 
-#### <a name="minimal-expansions-label-definitions-link">Minimal-expansions
+#### Minimal-expansions<a name="minimal-expansions-label-definitions-link">
 Minimal-expansion involves the addition of one additional turn to a sequence.
 The turn which is added is designed not to project any further within-sequence
 talk beyond itself; that is, it is designed to constitute a minimal expansion
@@ -358,10 +359,10 @@ additional turns that behave as expansions but consist only of one turn.
 
             A: Thanks.                                           Post - thanking
 
-## <a name="da-label-definitions-link">Dialogue Acts
+## Dialogue Acts<a name="da-label-definitions-link">
 An utterances DA describes not just its meaning, but the speakers intentions in the wider context of the conversation,  and therefore, facilitate the computational modelling of communicative behaviour in dialogue (Bunt et al., 2012). The following DA are aligned with DiAML (ISO 24617-2) (British Standards Institution, 2012) and are arranged into eight categories according to their function.
 
-Information-seeking Functions <a name="informations-seeking-functions-label-definitions-link">
+Information-seeking Functions<a name="information-seeking-functions-label-definitions-link">
 -----------------------------
 
 #### propositionalQuestion (Yes/No)
@@ -390,7 +391,7 @@ Communicative function of a dialogue act performed by the sender, S, in order to
 
 **Example:** “The meeting starts at ten, right?”
 
-Information-providing Functions <a name="informations-providing-functions-label-definitions-link">
+Information-providing Functions<a name="information-providing-functions-label-definitions-link">
 -------------------------------
 
 #### inform (Statement)
@@ -444,7 +445,7 @@ Communicative function of a dialogue act performed by the sender, S, in order to
 
 **Example:** “Nope.”
 
-Commissive Functions <a name="commissive-functions-label-definitions-link">
+Commissive Functions<a name="commissive-functions-label-definitions-link">
 --------------------
 
 #### offer
@@ -492,7 +493,7 @@ Communicative function of a dialogue act by which the sender, S, indicates that 
 
 **Example:** “I don’t think so.”
 
-Directive Functions <a name="directive-functions-label-definitions-link">
+Directive Functions<a name="directive-functions-label-definitions-link">
 -------------------
 
 #### request
@@ -521,7 +522,7 @@ Communicative function of a dialogue act performed by the sender, S, in order to
 
 **Example:** “No thank you.”
 
-Feedback Functions <a name="feedback-functions-label-definitions-link">
+Feedback Functions<a name="feedback-functions-label-definitions-link">
 ------------------
 
 #### autoPositive (Positive Understanding/Feedback)
@@ -536,7 +537,7 @@ Communicative function of a dialogue act performed by the sender, S, in order to
 
 **Example:** “Sorry?”; “What?”
 
-Time Management Functions <a name="time-management-functions-label-definitions-link">
+Time Management Functions<a name="time-management-functions-label-definitions-link">
 -------------------------
 
 #### stalling (Pausing)
@@ -546,7 +547,7 @@ Pausing occurs either in preparation of continuing the dialogue, or because some
 
 **Example:** “Let me see...”; “Ehm...”; “Just a moment”
 
-Own and Partner Communication Management Functions <a name="owner-and-partner-communication-management-functions-label-definitions-link">
+Own and Partner Communication Management Functions<a name="owne-and-partner-communication-management-functions-label-definitions-link">
 --------------------------------------------------
 
 #### retraction (Abandon)
@@ -554,7 +555,7 @@ Communicative function of a dialogue act performed by the sender, S, in order to
 
 **Example:** “Then we’re going to g– ”
 
-Social Obligations Management Functions <a name="social-obligations-functions-label-definitions-link">
+Social Obligations Management Functions<a name="social-obligations-management-functions-label-definitions-link">
 ---------------------------------------
 
 #### initialGreeting
