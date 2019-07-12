@@ -37,13 +37,14 @@ body {
     margin-bottom: 50px;
 }
 
+.title-paragraph {
+    text-align: center;
+}
+
 h1, h2, h3 {
     color: var(--title-font-color);
 }
 
-.title-paragraph {
-    text-align: center;
-}
 
 a {
     color: var(--title-font-color);
