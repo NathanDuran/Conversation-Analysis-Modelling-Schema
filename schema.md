@@ -9,6 +9,7 @@
 
 ##### &emsp;[Adjacency Pair Types (AP-types)](#adjacency-pair-types-ap-types)
 
+
 [Annotation Guidelines](#annotation-guidelines)
 ------------
 
@@ -22,10 +23,13 @@
 
 &emsp; [Minimal Expansion](#minimal-expansion)
 
-##### &emsp;[Dialogue Acts and Adjacency Pair Types (AP-types)](#dialogue-acts-and-adjacency-pair-types-ap-types)
+##### &emsp;[Dialogue Acts and Adjacency Pair Types (AP-types)](#annotation-guidelines-da-ap-types-link)
 
-[Adjacency Pairs](#adjacency-pairs)
+
+[Label Definitions](#label-definitions)
 ------------
+
+### [Adjacency Pairs](#adjacency-pairs)
 
 ##### &emsp;[Base](#base)
 
@@ -39,8 +43,8 @@
 
 ##### &emsp;[Minimal-expansions](#minimal-expansions)
 
-[Dialogue Acts](#dialogue-acts)
-------------
+
+### [Dialogue Acts](#dialogue-acts)
 
 ##### &emsp;[Information-seeking Functions](#information-seeking-functions)
 
@@ -131,7 +135,7 @@
 [Reference List](#references)
 ------------
 
-Overview
+<a name="overview-link"></a>Overview
 ========
 The Conversation Analysis (CA) schema defines a domain agnostic annotation scheme for dialogue that is aligned with relevant theories from within the CA literature and the Dialogue Act Mark-up Language (DiAML) as defined in ISO 24617 (British Standards Institution, 2012). The schema defines both Adjacency Pairs (AP) and Dialogue Acts (DA) which combine to form AP-types. The AP-type labels are designed to capture the semantic and syntactic structure of an interaction, in a format that is independent of the domain or topic, and which facilitate the computational modelling of dialogue.
 
@@ -139,7 +143,7 @@ There are 11 AP in the schema and the set includes; FPP and SPP for base, pre, p
 
 The set of 35 DA are derived from the Dialogue Act Mark-up Language (DiAML) as defined in ISO 24617 (British Standards Institution, 2012). DiAML was developed as an empirically and theoretically well founded, application independent, DA annotation scheme and is also intended to be used by both human annotators and automatic annotation methods.
 
-## Adjacency Pairs (AP)
+## <a name="ap-overview-link">Adjacency Pairs (AP)
 AP are the base units of sequence-construction in talk, and in their basic unexpanded form comprise of two turns by different speakers that take place one after the other. The initial turn is called the First Pair Part (FPP) and initiates an exchange, the second turn is a Second Pair Part (SPP) which are responsive to the prior FPP. For example:
 
      A: Do you know the directions to the Zoo?          FPP-base
@@ -156,14 +160,14 @@ To account for more complex dialogue structures, AP also include the concept of 
 
      B: Get on the subway.                              SPP-base
 
-## Dialogue Acts (DA)
+## <a name="da-overview-link">Dialogue Acts (DA)
 DA are a method of labelling the semantic content and communicative function of a single utterance of dialogue, such as, a question, request or greeting etc. The semantic content specifies objects, propositions and events that the DA is about; the communicative function specifies the way an addressee should use the semantic content to update their information, or dialogue, state (Bunt et al., 2012). For example, the propositional question “Do you know the directions to the Zoo?” contains a proposition (Do you know directions?) and an object (the Zoo). The addressee knows that a response is expected (communicative function) and can use this information (semantic content) to formulate a response.
 
      A: Do you know the directions to the Zoo?          propQuestion
      
      B: Get on the subway.                              answer
 
-## Adjacency Pair Types (AP-types)
+## <a name="ap-types-overview-link">Adjacency Pair Types (AP-types)
 AP can also be ‘type related’ and this pair-type relation has the useful property of limiting the range of possible responses to a given FPP. For example, a question could be followed by an answer, or followed by a question (FPP-insert), to elicit information required to better answer the initial question. Within the CA Schema the AP-types are defined by the addition of a DA label. Both the AP and DA labels are combined to create an AP-type label for each utterance of a dialogue.
 
      A: Do you know the directions to the Zoo?          FPP-base - propQuestion
@@ -176,11 +180,11 @@ AP can also be ‘type related’ and this pair-type relation has the useful pro
 
 AP then, can act as formal set of ‘rules’ which describe how an interaction can be structured and that apply to all types of conversation, irrespective of the current topic or objectives of the interaction. The inclusion of DA as semantic type-labels for adjacency-pair-parts support this structure, by enabling the identification and selection of subsequent pair-parts and capturing an exchange into a single structure (Boyer et al., 2009).
 
-Annotation Guidelines
+<a name="annotation-guidelines-link">Annotation Guidelines
 =====================
 The following section provides some guidance on the application of the schema when annotating dialogue and outlines certain limitations or restrictions that must be considered to maintain consistency with the definitions.
 
-## Adjacency Pair Sequences
+## <a name="annotation-guidelines-ap-link">Adjacency Pair Sequences
 For all AP sequence-types; base, pre, insert and post expansions the following rules apply:
 
 1.	The speaker of a FPP must be different to the speaker of a SPP.
@@ -192,8 +196,11 @@ For all AP sequence-types; base, pre, insert and post expansions the following r
 4.	The initiation and conclusion of two different sequences may not overlap each other. For example, the following is not permitted;
 
      Utterance 1		FPP-base
+     
      Utterance 2			FPP-insert
+     
      Utterance 3		SPP-base
+     
      Utterance 4			SPP-insert
 
 ### Base Sequences
@@ -214,7 +221,7 @@ Unlike base, pre and post type sequences, *Insert-expansion* are permitted to be
 
 *Minimal-expansions* have fewer restriction that pair-sequences to allow for flexibility when annotating. However, they should abide by their semantic intent. For example, a *pre-minimal-expansion* should be relating to a future base-type sequence, a *post-minimal-expansion* to a previous base-type sequence and an *insert-minimal-expansion* within a sequence.
 
-## Dialogue Acts and Adjacency Pair Types (AP-types)
+## <a name="annotation-guidelines-da-ap-types-link">Dialogue Acts and Adjacency Pair Types (AP-types)
 To produce AP-types an annotator must simply select one AP and one DA for an utterance of dialogue and the combination of these two labels is considered an AP-type label. The selection of the DA is dependent on the *semantic content* and *communicative function* of the individual utterance and the AP the utterances position within, or relation to, the structure of the dialogue.
 
 Due to the large number of possible combinations, and to allow flexibility, the schema does not explicitly define all valid DA and AP combinations. Instead, annotators should consider the meaning and context within which the individual labels being applied to produce AP-types. The following should provide some guidance when selecting combinations of appropriate labels. However, while they should apply in many circumstances, these are only examples, not explicit rules:
@@ -606,3 +613,4 @@ Conversation Analysis I*. Cambridge: Cambridge University Press. doi:
 
 Sidnell, J. (2010) *Conversation Analysis - An Introduction*. Whiley-Blackwell.
 doi: 10.1093/acrefore/9780199384655.013.40.
+

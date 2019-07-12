@@ -13,13 +13,18 @@
     <!-- Contents -->
     <h2><a href="#overview">Overview</a></h2>
 
+    <hr>
+
     <h5>&emsp;<a href="#adjacency-pairs-ap">Adjacency Pairs (AP)</a></h5>
 
     <h5>&emsp;<a href="#dialogue-acts-da">Dialogue Acts (DA)</a></h5>
 
     <h5>&emsp;<a href="#adjacency-pair-types-ap-types">Adjacency Pair Types (AP-types)</a></h5>
 
+
     <h2><a href="#annotation-guidelines">Annotation Guidelines</a></h2>
+
+    <hr>
 
     <h5>&emsp;<a href="#adjacency-pair-sequences">Adjacency Pair Sequences</a></h5>
 
@@ -33,7 +38,12 @@
 
     <h5>&emsp;<a href="#dialogue-acts-and-adjacency-pair-types-ap-types">Dialogue Acts and Adjacency Pair Types (AP-types)</a></h5>
 
-    <h2><a href="#adjacency-pairs">Adjacency Pairs</a></h2>
+
+    <h2><a href="#label-definitions">Label Definitions</a></h2>
+
+    <hr>
+
+    <h3><a href="#adjacency-pairs">Adjacency Pairs</a></h3>
 
     <h5>&emsp;<a href="#base">Base</a></h5>
 
@@ -47,7 +57,8 @@
 
     <h5>&emsp;<a href="#minimal-expansions">Minimal-expansions</a></h5>
 
-    <h2><a href="#dialogue-acts">Dialogue Acts</a></h2>
+
+    <h3><a href="#dialogue-acts">Dialogue Acts</a></h3>
 
     <h5>&emsp;<a href="#information-seeking-functions">Information-seeking Functions</a></h5>
 
@@ -164,24 +175,26 @@
         initiates an exchange, the second turn is a Second Pair Part (SPP) which are responsive to the prior FPP. For
         example:</p>
 
-    <pre><code> A: Do you know the directions to the Zoo?          FPP-base
+    <pre><code>
+        A: Do you know the directions to the Zoo?          FPP-base
 
- B: Get on the subway.                              SPP-base
-</code></pre>
+        B: Get on the subway.                              SPP-base
+    </code></pre>
 
     <p>To account for more complex dialogue structures, AP also include the concept of expansion which allows the
         construction of sequences of talk that are made up of more than one AP, while still contributing to the same basic
         action, i.e. a question (FPP-base) could be followed by a question (FPP-insert), to elicit information required to
         better answer the initial question. For example:</p>
 
-    <pre><code> A: Do you know the directions to the Zoo?          FPP-base
+    <pre><code>
+        A: Do you know the directions to the Zoo?          FPP-base
 
-    B: You driving or walking?                         FPP-insert
+            B: You driving or walking?                         FPP-insert
 
-    A: Walking.                                        SPP-insert
+            A: Walking.                                        SPP-insert
 
- B: Get on the subway.                              SPP-base
-</code></pre>
+        B: Get on the subway.                              SPP-base
+    </code></pre>
 
     <h2 id="dialogue-acts-da">Dialogue Acts (DA)</h2>
 
@@ -193,10 +206,11 @@
         knows that a response is expected (communicative function) and can use this information (semantic content) to
         formulate a response.</p>
 
-    <pre><code> A: Do you know the directions to the Zoo?          propQuestion
+    <pre><code>
+        A: Do you know the directions to the Zoo?          propQuestion
 
- B: Get on the subway.                              answer
-</code></pre>
+        B: Get on the subway.                              answer
+    </code></pre>
 
     <h2 id="adjacency-pair-types-ap-types">Adjacency Pair Types (AP-types)</h2>
 
@@ -206,14 +220,15 @@
         AP-types are defined by the addition of a DA label. Both the AP and DA labels are combined to create an AP-type
         label for each utterance of a dialogue.</p>
 
-    <pre><code> A: Do you know the directions to the Zoo?          FPP-base - propQuestion
+    <pre><code>
+        A: Do you know the directions to the Zoo?          FPP-base - propQuestion
 
-    B: You driving or walking?                         FPP-insert - choiceQuestion
+            B: You driving or walking?                         FPP-insert - choiceQuestion
 
-    A: Walking.                                        SPP-insert - answer
+            A: Walking.                                        SPP-insert - answer
 
- B: Get on the subway.                              SPP-base - answer
-</code></pre>
+        B: Get on the subway.                              SPP-base - answer
+    </code></pre>
 
     <p>AP then, can act as formal set of ‘rules’ which describe how an interaction can be structured and that apply to all
         types of conversation, irrespective of the current topic or objectives of the interaction. The inclusion of DA as
@@ -241,14 +256,14 @@
             following is not permitted;</p></li>
     </ol>
     <pre><code>
-    Utterance 1     FPP-base
+        Utterance 1     FPP-base
 
-    Utterance 2     FPP-insert
+        Utterance 2     FPP-insert
 
-    Utterance 3     SPP-base
+        Utterance 3     SPP-base
 
-    Utterance 4     SPP-insert
-</code></pre>
+        Utterance 4     SPP-insert
+    </code></pre>
 
     <h3 id="base-sequences">Base Sequences</h3>
 
@@ -343,10 +358,11 @@
 
     <p><strong>Example:</strong></p>
 
-    <pre><code> A: What time is it?        FPP-base - setQuestion
+    <pre><code>
+        A: What time is it?        FPP-base - setQuestion
 
- B: Three o’ clock.         SPP-base - answer
-</code></pre>
+        B: Three o’ clock.         SPP-base - answer
+    </code></pre>
 
     <h2 id="expansions">Expansions</h2>
 
@@ -366,14 +382,15 @@
 
     <p><strong>Example:</strong></p>
 
-    <pre><code> A: What you doing?         FPP-pre - setQuestion
+    <pre><code>
+        A: What you doing?         FPP-pre - setQuestion
 
- B: Not much.               SPP-pre - answer
+        B: Not much.               SPP-pre - answer
 
-    A: Wanna drink?             FPP-base - propositionalQuestion
+            A: Wanna drink?             FPP-base - propositionalQuestion
 
-    B: Sure.                    SPP-base - confirm
-</code></pre>
+            B: Sure.                    SPP-base - confirm
+    </code></pre>
 
     <h4 id="insert-expansions">Insert-expansions</h4>
 
@@ -389,14 +406,15 @@
 
     <p><strong>Example:</strong></p>
 
-    <pre><code> A: Do you know the directions to the Zoo?          FPP-base - propQuestion
+    <pre><code>
+        A: Do you know the directions to the Zoo?          FPP-base - propQuestion
 
-    B: You driving or walking?                         FPP-insert - choiceQuestion
+            B: You driving or walking?                         FPP-insert - choiceQuestion
 
-    A: Walking.                                        SPP-insert - answer
+            A: Walking.                                        SPP-insert - answer
 
- B: Get on the subway.                              SPP-base - answer
-</code></pre>
+        B: Get on the subway.                              SPP-base - answer
+    </code></pre>
 
     <h4 id="post-expansions">Post-expansions</h4>
 
@@ -411,14 +429,15 @@
 
     <p><strong>Example:</strong></p>
 
-    <pre><code> A: What is the weather like today in tomorrow?     FPP-base - setQuestion
+    <pre><code>
+        A: What is the weather like today in tomorrow?     FPP-base - setQuestion
 
- B: Forecast for cloudy skies today.                SPP-base - answer
+        B: Forecast for cloudy skies today.                SPP-base - answer
 
-    A: Okay.                                            FPP-post - autoPositive
+            A: Okay.                                            FPP-post - autoPositive
 
-    B: No problem.                                      SPP-post - acceptThanking
-</code></pre>
+            B: No problem.                                      SPP-post - acceptThanking
+    </code></pre>
 
     <h4 id="minimal-expansions">Minimal-expansions</h4>
 
@@ -432,16 +451,17 @@
 
     <p><strong>Example:</strong></p>
 
-    <pre><code> A: My tooth hurts...                               Pre - inform
+    <pre><code>
+        A: My tooth hurts...                               Pre - inform
 
-    A: When is my dentist appointment?                  FPP-base - setQuestion
+            A: When is my dentist appointment?                  FPP-base - setQuestion
 
-        A: Who am I going with?                             Insert - setQuestion
+                A: Who am I going with?                             Insert - setQuestion
 
-    B: The appointment is at 11 am with your Aunt.      SPP-base - answer
+            B: The appointment is at 11 am with your Aunt.      SPP-base - answer
 
-        A: Thanks.                                           Post - thanking
-</code></pre>
+                A: Thanks.                                           Post - thanking
+    </code></pre>
 
     <h2 id="dialogue-acts">Dialogue Acts</h2>
 

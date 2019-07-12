@@ -29,10 +29,12 @@ A corpus of CA labelled dialogue [CA-KVRET](https://github.com/NathanDuran/CA-KV
 
 &emsp; [Minimal Expansion](#minimal-expansion)
 
-##### &emsp;[Dialogue Acts and Adjacency Pair Types (AP-types)](#dialogue-acts-and-adjacency-pair-types-ap-types)
+##### &emsp;[Dialogue Acts and Adjacency Pair Types (AP-types)](#annotation-guidelines-da-ap-types-link)
 
-[Adjacency Pairs](#adjacency-pairs)
+[Label Definitions](#label-definitions)
 ------------
+
+### [Adjacency Pairs](#adjacency-pairs)
 
 ##### &emsp;[Base](#base)
 
@@ -46,8 +48,8 @@ A corpus of CA labelled dialogue [CA-KVRET](https://github.com/NathanDuran/CA-KV
 
 ##### &emsp;[Minimal-expansions](#minimal-expansions)
 
-[Dialogue Acts](#dialogue-acts)
-------------
+
+### [Dialogue Acts](#dialogue-acts)
 
 ##### &emsp;[Information-seeking Functions](#information-seeking-functions)
 
@@ -199,8 +201,11 @@ For all AP sequence-types; base, pre, insert and post expansions the following r
 4.	The initiation and conclusion of two different sequences may not overlap each other. For example, the following is not permitted;
 
      Utterance 1		FPP-base
+     
      Utterance 2			FPP-insert
+     
      Utterance 3		SPP-base
+     
      Utterance 4			SPP-insert
 
 ### Base Sequences
@@ -221,7 +226,7 @@ Unlike base, pre and post type sequences, *Insert-expansion* are permitted to be
 
 *Minimal-expansions* have fewer restriction that pair-sequences to allow for flexibility when annotating. However, they should abide by their semantic intent. For example, a *pre-minimal-expansion* should be relating to a future base-type sequence, a *post-minimal-expansion* to a previous base-type sequence and an *insert-minimal-expansion* within a sequence.
 
-## Dialogue Acts and Adjacency Pair Types (AP-types)
+## <a name="annotation-guidelines-da-ap-types-link">Dialogue Acts and Adjacency Pair Types (AP-types)
 To produce AP-types an annotator must simply select one AP and one DA for an utterance of dialogue and the combination of these two labels is considered an AP-type label. The selection of the DA is dependent on the *semantic content* and *communicative function* of the individual utterance and the AP the utterances position within, or relation to, the structure of the dialogue.
 
 Due to the large number of possible combinations, and to allow flexibility, the schema does not explicitly define all valid DA and AP combinations. Instead, annotators should consider the meaning and context within which the individual labels being applied to produce AP-types. The following should provide some guidance when selecting combinations of appropriate labels. However, while they should apply in many circumstances, these are only examples, not explicit rules:
