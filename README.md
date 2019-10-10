@@ -5,7 +5,8 @@ A Conversation Analysis Annotation Schema for Computational Modelling of Dialogu
 A full explanation of the intended use for the CA schema can be found in the paper 
 [Conversation Analysis Structured Dialogue for Multi-Domain Dialogue Management](https://www.researchgate.net/publication/329809503_Conversation_Analysis_Structured_Dialogue_for_Multi-Domain_Dialogue_Management).
 
-A corpus of CA labelled dialogue [CA-KVRET](https://github.com/NathanDuran/CA-KVRET) can be found [here](https://github.com/NathanDuran/CA-KVRET). It was labelled with the [CA-Dialogue-Tagger](https://github.com/NathanDuran/CA-Dialogue-Tagger).
+A corpus of CA labelled dialogue [CA-KVRET](https://github.com/NathanDuran/CA-KVRET) can be found [here](https://github.com/NathanDuran/CA-KVRET).
+It was labelled with the [CA-Dialogue-Tagger](https://github.com/NathanDuran/CA-Dialogue-Tagger).
 
 [Overview](#overview-link)
 ------------
@@ -55,7 +56,7 @@ A corpus of CA labelled dialogue [CA-KVRET](https://github.com/NathanDuran/CA-KV
 
 ##### &emsp;[Information-seeking Functions](#information-seeking-functions-label-definitions-link)
 
-&emsp; [propoitionalQuestion (Yes/No)](#propositionalquestion-yesno)
+&emsp; [propositionalQuestion (Yes/No)](#propositionalquestion-yesno)
 
 &emsp; [setQuestion (Who/What/Where/How)](#setquestion-whowhatwherehow)
 
@@ -83,29 +84,17 @@ A corpus of CA labelled dialogue [CA-KVRET](https://github.com/NathanDuran/CA-KV
 
 &emsp; [offer](#offer)
 
-&emsp; [addressRequest (Consider/Conditionally Accept)](#addressrequest-consideron-condition)
+&emsp; [conditionalAccept (Consider/Address a Request/Suggestion/Offer)](#conditionalaccept-consideraddress-a-requestsuggestionoffer)
 
-&emsp; [acceptRequest](#acceptrequest)
+&emsp; [accept (Request/Suggestion/Offer)](#accept-requestsuggestionoffer)
 
-&emsp; [declineRequest](#declinerequest)
-
-&emsp; [addressSuggest (Consider/Conditionally Accept)](#addresssuggest-consideron-condition)
-
-&emsp; [acceptSuggest](#acceptsuggest)
-
-&emsp; [declineSuggest](#declinesuggest)
+&emsp; [decline (Request/Suggestion/Offer)](#decline-requestsuggestionoffer)
 
 ##### &emsp;[Directive Functions](#directive-functions-label-definitions-link)
 
 &emsp; [request](#request)
 
 &emsp; [suggest](#suggest)
-
-&emsp; [addressOffer (Consider/Conditionally Accept)](#addressoffer-consideron-condition)
-
-&emsp; [acceptOffer](#acceptoffer)
-
-&emsp; [declineOffer](#declineoffer)
 
 ##### &emsp;[Feedback Functions](#feedback-functions-label-definitions-link)
 
@@ -123,13 +112,9 @@ A corpus of CA labelled dialogue [CA-KVRET](https://github.com/NathanDuran/CA-KV
 
 ##### &emsp;[Social Obligations Management Functions](#social-obligations-management-functions-label-definitions-link)
 
-&emsp; [initialGreeting](#initialgreeting)
+&emsp; [greeting](#greeting)
 
-&emsp; [returnGreeting](#returngreeting)
-
-&emsp; [initialGoodbye](#initialgoodbye)
-
-&emsp; [returnGoodbye](#returngoodbye)
+&emsp; [goodbye](#goodbye)
 
 &emsp; [thanking](#thanking)
 
@@ -149,7 +134,7 @@ The Conversation Analysis (CA) schema defines a domain agnostic annotation schem
 
 There are 11 AP in the schema and the set includes; FPP and SPP for base, pre, post and insert-expansions as described by Liddicoat, (2007) and Sidnell, (2010). Because dialogue does not always contain even numbers of utterances, there are also single-labels (pre, post and insert) for utterances that do not belong to conventional AP. These are closely related to the idea of minimal-expansions (Schegloff, 2007), in that they are not designed to project any further sequences of talk, but rather open, close or add to sequences respectively.
 
-The set of 35 DA are derived from the Dialogue Act Mark-up Language (DiAML) as defined in ISO 24617 (British Standards Institution, 2012). DiAML was developed as an empirically and theoretically well founded, application independent, DA annotation scheme and is also intended to be used by both human annotators and automatic annotation methods.
+The set of 27 DA are derived from the Dialogue Act Mark-up Language (DiAML) as defined in ISO 24617 (British Standards Institution, 2012). DiAML was developed as an empirically and theoretically well founded, application independent, DA annotation scheme and is also intended to be used by both human annotators and automatic annotation methods.
 
 ## Adjacency Pairs (AP)<a name="ap-overview-link">
 AP are the base units of sequence-construction in talk, and in their basic unexpanded form comprise of two turns by different speakers that take place one after the other. The initial turn is called the First Pair Part (FPP) and initiates an exchange, the second turn is a Second Pair Part (SPP) which are responsive to the prior FPP. For example:
@@ -171,14 +156,14 @@ To account for more complex dialogue structures, AP also include the concept of 
 ## Dialogue Acts (DA)<a name="da-overview-link">
 DA are a method of labelling the semantic content and communicative function of a single utterance of dialogue, such as, a question, request or greeting etc. The semantic content specifies objects, propositions and events that the DA is about; the communicative function specifies the way an addressee should use the semantic content to update their information, or dialogue, state (Bunt et al., 2012). For example, the propositional question “Do you know the directions to the Zoo?” contains a proposition (Do you know directions?) and an object (the Zoo). The addressee knows that a response is expected (communicative function) and can use this information (semantic content) to formulate a response.
 
-     A: Do you know the directions to the Zoo?          propQuestion
+     A: Do you know the directions to the Zoo?          propositionalQuestion
      
      B: Get on the subway.                              answer
 
 ## Adjacency Pair Types (AP-types)<a name="ap-types-overview-link">
 AP can also be ‘type related’ and this pair-type relation has the useful property of limiting the range of possible responses to a given FPP. For example, a question could be followed by an answer, or followed by a question (FPP-insert), to elicit information required to better answer the initial question. Within the CA Schema the AP-types are defined by the addition of a DA label. Both the AP and DA labels are combined to create an AP-type label for each utterance of a dialogue.
 
-     A: Do you know the directions to the Zoo?          FPP-base - propQuestion
+     A: Do you know the directions to the Zoo?          FPP-base - proposotionalQuestion
 
         B: You driving or walking?                         FPP-insert - choiceQuestion
 
@@ -227,7 +212,7 @@ Unlike base, pre and post type sequences, *Insert-expansion* are permitted to be
 ### Minimal Expansion
 *Minimal-expansions* allow for additional turns that behave as expansions but consist only of one turn. Their primary role is to account for the uneven number of utterances in a dialogue, which is often the case, and single utterances that do not belong to a pair-sequence. For example, they allow the same speaker to produce more than one utterance of different types in succession or for a speaker to produce one utterance that does not belong to (initiate or conclude) an AP.
 
-*Minimal-expansions* have fewer restriction that pair-sequences to allow for flexibility when annotating. However, they should abide by their semantic intent. For example, a *pre-minimal-expansion* should be relating to a future base-type sequence, a *post-minimal-expansion* to a previous base-type sequence and an *insert-minimal-expansion* within a sequence.
+*Minimal-expansions* have fewer restrictions than pair-sequences to allow for flexibility when annotating. However, they should abide by their semantic intent. For example, a *pre-minimal-expansion* should be relating to a future base-type sequence, a *post-minimal-expansion* to a previous base-type sequence and an *insert-minimal-expansion* within a sequence.
 
 ## Dialogue Acts and Adjacency Pair Types (AP-types)<a name="da-ap-types-annotation-guidelines-link">
 To produce AP-types an annotator must simply select one AP and one DA for an utterance of dialogue and the combination of these two labels is considered an AP-type label. The selection of the DA is dependent on the *semantic content* and *communicative function* of the individual utterance and the AP the utterances position within, or relation to, the structure of the dialogue.
@@ -238,7 +223,6 @@ Due to the large number of possible combinations, and to allow flexibility, the 
 
 - SPP are likely to have associated DA labels that are within the *Information-providing* and *Commissive* Function categories.
 
-- DA within the *Social Obligations Management* Functions have initiating and responsive versions, i.e. *initialGreeting* and *returnGreeting*, and these naturally lend themselves to FPP and SPP respectively.
 
 Label Definitions<a name="label-definitions-link">
 =================
@@ -453,10 +437,10 @@ Communicative function of a dialogue act by which the sender, S, indicates their
 
 **Example:** “I will look that up for you.”
 
-#### addressRequest (Consider/Conditionally Accept)
-Communicative function of a dialogue act by which the sender, S, indicates that they will consider the performance of an action that they were requested to perform, possibly depending on certain conditions that they make explicit.
+#### conditionalAccept (Consider/Address a Request/Suggestion/Offer)
+Communicative function of a dialogue act by which the sender, S, indicates that they will consider the performance of an action, depending on certain conditions that they make explicit. The action may be one that they were requested to perform or was suggested that they perform. Or to indicate that they are considering the possibility that the addressee, A, performs the action that A has previously offered to perform.
 
-The addressRequest function covers a range of possible responses to a request. If the response does not express a condition, then the sender commits to unconditionally perform the requested action; this is the special case of acceptRequest. If the condition is specified that the action be performed zero times, then the sender in fact declines to perform the requested action (as they commit to not perform the action).
+The conditionalAccept function covers a range of possible responses to a request, suggestion or offer. If the condition specified is met the sender commits to the action, or accepts the offer, otherwise the sender in fact declines to perform the requested action or accept the offer.
 
 **Example:**
 
@@ -464,34 +448,23 @@ A: “Please give me the gun.”
 
 S: “If you push the bag to me.”
 
-#### acceptRequest
-Communicative function of a dialogue act by which the sender, S, commits them self to perform an action that they have been requested to perform.
-
-**Example:** “Sure.”
-
-#### declineRequest
-Communicative function of a dialogue act by which the sender, S, indicates that they refuse to perform an action that they have been requested to perform.
-
-**Example:** “Not now.”
-
-#### addressSuggest (Consider/Conditionally Accept)
-Communicative function of a dialogue act by which the sender, S, indicates that they will consider performing an action that was suggested to them, possibly depending on certain conditions that they make explicit.
+#### accept (Request/Suggestion/Offer)
+Communicative function of a dialogue act by which the sender, S, commits them self to perform an action that they have been requested to perform or was suggested that they perform. Or to inform the addressee, A, that S would like A to perform the action that A has previously offered to perform.
 
 **Example:**
 
-A: “Let’s go there together.”
+A: “Would you like help with that?”
 
-S: “Only if we’re in full agreement about the way to proceed when we get there.”
+S: “Sure.”
 
-#### acceptSuggest
-Communicative function of a dialogue act by which the sender, S, commits them self to perform an action that was suggested to them.
+#### decline (Request/Suggestion/Offer)
+Communicative function of a dialogue act by which the sender, S, indicates that they refuse to perform an action that they have been requested to perform or was suggested that they perform. Or to inform the addressee, A, that S does not want A to perform the action that A has previously offered to perform.
 
-**Example:** “Let’s do that.”
+**Example:**
 
-#### declineSuggest
-Communicative function of a dialogue act by which the sender, S, indicates that they will not perform an action that was suggested.
+A: “Would you like help with that?”
 
-**Example:** “I don’t think so.”
+S: “No thank you.”
 
 Directive Functions<a name="directive-functions-label-definitions-link">
 -------------------
@@ -506,21 +479,6 @@ Communicative function of a dialogue act performed by the sender, S, in order to
 Communicative function of a dialogue act performed by the sender, S, in order to make the addressee, A, consider the performance of a certain action, specified by the semantic content, S believes that this action is in A’s interest, and assumes that A is able to perform the action.
 
 **Example:** “Let’s wait for the speaker to finish.”
-
-#### addressOffer (Consider/Conditionally Accept)
-Communicative function of a dialogue act performed by the sender, S, in order to indicate that they are considering the possibility that A performs the action or accepts on condition, possibly with certain conditions that he makes explicit.
-
-**Example:** “That would be good!”
-
-#### acceptOffer
-Communicative function of a dialogue act performed by the sender, S, in order to inform the addressee, A, that S would like A to perform the action that A has offered to perform.
-
-**Example:** “Yes please.”
-
-#### declineOffer
-Communicative function of a dialogue act performed by the sender, S, in order to inform the addressee, A, that S does not want A to perform the action that A has offered to perform.
-
-**Example:** “No thank you.”
 
 Feedback Functions<a name="feedback-functions-label-definitions-link">
 ------------------
@@ -545,7 +503,7 @@ Communicative function of a dialogue act performed by the sender, S, in order to
 
 Pausing occurs either in preparation of continuing the dialogue, or because something else came up which is more urgent for the sender to attend to.
 
-**Example:** “Let me see...”; “Ehm...”; “Just a moment”
+**Example:** “Let me see...”; “Ehm...”; “Just a moment”; “Umm...”
 
 Own and Partner Communication Management Functions<a name="owne-and-partner-communication-management-functions-label-definitions-link">
 --------------------------------------------------
@@ -558,27 +516,19 @@ Communicative function of a dialogue act performed by the sender, S, in order to
 Social Obligations Management Functions<a name="social-obligations-management-functions-label-definitions-link">
 ---------------------------------------
 
-#### initialGreeting
-Communicative function of a dialogue act performed by the sender, S, in order to inform the addressee, A that S is present and aware of A’s presence; S puts pressure on A to acknowledge this.
+#### greeting
+Communicative function of a dialogue act performed by the sender, S, in order to inform the addressee, A that S is present and aware of A’s presence.
 
-Greetings usually come in initiative-response pairs within a dialogue; this data category corresponds to the first element of such a pair.
+Greetings usually come in initiative-response pairs and are commonly used to open a dialogue.
 
 **Example:** “Hello!”; “Good morning”
 
-#### returnGreeting
-Communicative function of a dialogue act performed by the sender, S, in order to acknowledge that S is aware of the presence of the addressee, A, and of A having signalled their presence to S.
+#### goodbye
+Communicative function of a dialogue act performed by the sender, S, in order to inform the addressee, A, that S intends the current utterance to be their final contribution to the dialogue.
 
-#### initialGoodbye
-Communicative function of a dialogue act performed by the sender, S, in order to inform the addressee, A, that S intends the current utterance to be their final contribution to the dialogue; S puts pressure on A to acknowledge this.
-
-Goodbyes usually come in initiative-response pairs within a dialogue; this data category corresponds to the second element of such a pair. Initial and return goodbyes are commonly used to close a dialogue.
+Goodbyes usually come in initiative-response pairs and are commonly used to close a dialogue.
 
 **Example:** “Bye bye, see you later.”
-
-#### returnGoodbye
-Communicative function of a dialogue act performed by the sender, S, in order to acknowledge their awareness that the addressee, A, has signalled their final contribution to the dialogue and S signals in return their agreement to end the dialogue.
-
-**Example:** “Bye bye, see you.”
 
 #### thanking
 Communicative function of a dialogue act performed by the sender, S, in order to inform the addressee, A, that S is grateful for some action performed by A; S puts pressure on A to acknowledge this.
@@ -605,20 +555,16 @@ Communicative function of a dialogue act performed by the sender, S, in order to
 References
 ==========
 
-British Standards Institution (2012) ‘ISO 24617-2: Language Resource Management
-*-* Semantic Annotation Framework (SemAF) Part 2: Dialogue acts’. British
-Standards Institution.
+Boyer, K.E., Ha, E.Y., Phillips, R., Wallis, M.D., Vouk, M.A. and Lester, J. (2009) Inferring Tutorial Dialogue Structure with Hidden Markov Modeling. In: Proceedings of the Fourth Workshop on Innovative Use of NLP for Building Educational Applications - EdAppsNLP ’09 [online]. 2009 pp. 19–26. Available from: https://www.cs.rochester.edu/~tetreaul/bea4/Boyer-BEA4.pdfdoi:10.3115/1609843.1609846 [Accessed 18 November 2017].
 
-Bunt, H. *et al.* (2012) ‘ISO 24617-2 : A Semantically-based Standard for
-Dialogue Annotation’, in *Proceedings of LREC 2012*, pp. 430–437.
+British Standards Institution (2012) ISO 24617-2: Language Resource Management - Semantic Annotation Framework (SemAF) Part 2: Dialogue acts [online]. Available from: https://bsol-bsigroup-com.
 
-Liddicoat, A. J. (2007) *An Introduction to Conversation Analysis*. London:
-Continuum.
+Bunt, H., Alexandersson, J., Choe, J.-W., Fang, A.C., Hasida, K., Petukhova, V., Popescu-belis, A. and Traum, D. (2012) ISO 24617-2 : A Semantically-based Standard for Dialogue Annotation. In: Proceedings of LREC 2012 [online]. 2012 pp. 430–437. Available from: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.381.2726&rep=rep1&type=pdf [Accessed 16 November 2017].
 
-Schegloff, E. A. (2007) *Sequence Oranization in Interaction: A Primer in
-Conversation Analysis I*. Cambridge: Cambridge University Press. doi:
-10.1017/CBO9780511791208.
+Liddicoat, A.J. (2007) An Introduction to Conversation Analysis.  London: Continuum.
 
-Sidnell, J. (2010) *Conversation Analysis - An Introduction*. Whiley-Blackwell.
-doi: 10.1093/acrefore/9780199384655.013.40.
+Schegloff, E.A. (2007) Sequence Oranization in Interaction: A Primer in Conversation Analysis I [online]. Cambridge: Cambridge University Press. [Accessed 17 November 2017].
+
+Sidnell, J. (2010) Conversation Analysis - An Introduction [online]. (no place) Whiley-Blackwell. [Accessed 8 January 2018].
+
 
