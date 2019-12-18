@@ -4,6 +4,9 @@ A Conversation Analysis Annotation Schema for Computational Modelling of Dialogu
 
 A full explanation of the intended use for the CA schema can be found in the paper 
 [Conversation Analysis Structured Dialogue for Multi-Domain Dialogue Management](https://www.researchgate.net/publication/329809503_Conversation_Analysis_Structured_Dialogue_for_Multi-Domain_Dialogue_Management).
+If you use this schema please cite:
+Duran, N. and Battle, S. (2018) Conversation Analysis Structured Dialogue for Multi-Domain Dialogue Management.
+In: The International Workshop on Dialogue, Explanation and Argumentation in Human-Agent Interaction (DEXAHAI) 
 
 A corpus of CA labelled dialogue [CA-KVRET](https://github.com/NathanDuran/CA-KVRET) can be found [here](https://github.com/NathanDuran/CA-KVRET).
 It was labelled with the [CA-Dialogue-Tagger](https://github.com/NathanDuran/CA-Dialogue-Tagger).
