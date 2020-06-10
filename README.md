@@ -1,15 +1,14 @@
-# Conversation Analysis Schema
+# Conversation Analysis Modelling Schema
 A Conversation Analysis Annotation Schema for Computational Modelling of Dialogue. 
-[Available here](https://nathanduran.github.io/CA-Schema/)
+[Available here](https://nathanduran.github.io/Conversation-Analysis-Modelling-Schema/)
 
-A full explanation of the intended use for the CA schema can be found in the paper 
+A full explanation of the intended use for the CAMS can be found in the paper 
 [Conversation Analysis Structured Dialogue for Multi-Domain Dialogue Management](https://www.researchgate.net/publication/329809503_Conversation_Analysis_Structured_Dialogue_for_Multi-Domain_Dialogue_Management).
 If you use this schema please cite:
 Duran, N. and Battle, S. (2018) Conversation Analysis Structured Dialogue for Multi-Domain Dialogue Management.
 In: The International Workshop on Dialogue, Explanation and Argumentation in Human-Agent Interaction (DEXAHAI) 
 
-A corpus of CA labelled dialogue [CA-KVRET](https://github.com/NathanDuran/CA-KVRET) can be found [here](https://github.com/NathanDuran/CA-KVRET).
-It was labelled with the [CA-Dialogue-Tagger](https://github.com/NathanDuran/CA-Dialogue-Tagger).
+A corpus of CAMS labelled dialogue [CAMS-KVRET can be found here.](https://github.com/NathanDuran/CA-KVRET) 
 
 [Overview](#overview-link)
 ------------
@@ -133,7 +132,7 @@ It was labelled with the [CA-Dialogue-Tagger](https://github.com/NathanDuran/CA-
 
 Overview<a name="overview-link"></a>
 ========
-The Conversation Analysis (CA) schema defines a domain agnostic annotation scheme for dialogue that is aligned with relevant theories from within the CA literature and the Dialogue Act Mark-up Language (DiAML) as defined in ISO 24617 (British Standards Institution, 2012). The schema defines both Adjacency Pairs (AP) and Dialogue Acts (DA) which combine to form AP-types. The AP-type labels are designed to capture the semantic and syntactic structure of an interaction, in a format that is independent of the domain or topic, and which facilitate the computational modelling of dialogue.
+The Conversation Analysis Modelling Schema (CAMS) defines a domain agnostic annotation scheme for dialogue that is aligned with relevant theories from within the CA literature and the Dialogue Act Mark-up Language (DiAML) as defined in ISO 24617 (British Standards Institution, 2012). The schema defines both Adjacency Pairs (AP) and Dialogue Acts (DA) which combine to form AP-types. The AP-type labels are designed to capture the semantic and syntactic structure of an interaction, in a format that is independent of the domain or topic, and which facilitate the computational modelling of dialogue.
 
 There are 11 AP in the schema and the set includes; FPP and SPP for base, pre, post and insert-expansions as described by Liddicoat, (2007) and Sidnell, (2010). Because dialogue does not always contain even numbers of utterances, there are also single-labels (pre, post and insert) for utterances that do not belong to conventional AP. These are closely related to the idea of minimal-expansions (Schegloff, 2007), in that they are not designed to project any further sequences of talk, but rather open, close or add to sequences respectively.
 
@@ -164,7 +163,7 @@ DA are a method of labelling the semantic content and communicative function of 
      B: Get on the subway.                              answer
 
 ## Adjacency Pair Types (AP-types)<a name="ap-types-overview-link">
-AP can also be ‘type related’ and this pair-type relation has the useful property of limiting the range of possible responses to a given FPP. For example, a question could be followed by an answer, or followed by a question (FPP-insert), to elicit information required to better answer the initial question. Within the CA Schema the AP-types are defined by the addition of a DA label. Both the AP and DA labels are combined to create an AP-type label for each utterance of a dialogue.
+AP can also be ‘type related’ and this pair-type relation has the useful property of limiting the range of possible responses to a given FPP. For example, a question could be followed by an answer, or followed by a question (FPP-insert), to elicit information required to better answer the initial question. Within CAMS the AP-types are defined by the addition of a DA label. Both the AP and DA labels are combined to create an AP-type label for each utterance of a dialogue.
 
      A: Do you know the directions to the Zoo?          FPP-base - proposotionalQuestion
 
