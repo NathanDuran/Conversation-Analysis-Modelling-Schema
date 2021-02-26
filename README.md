@@ -316,9 +316,9 @@ sequences to be expanded after their SPP.
 
 **Example:**
 
-     A: What is the weather like today in tomorrow?     FPP-base - setQuestion
+     A: What is the weather like today and tomorrow?     FPP-base - setQuestion
 
-     B: Forecast for cloudy skies today.                SPP-base - answer
+     B: Forecast for cloudy skies today.                 SPP-base - answer
 
         A: Okay.                                            FPP-post - autoPositive
 
